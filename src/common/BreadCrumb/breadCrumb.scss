@@ -1,0 +1,23 @@
+.bread_crumb {
+    position: absolute;
+    top: 6%;
+    left: 26%;
+    width: 25%;
+    background-color: whitesmoke;
+}
+
+.breadcrumb-item > a {
+    color: #2dd771;
+}
+
+.breadcrumb_item > a {
+    color: silver;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 0.2rem;
+}
+
+.breadcrumb {
+    background-color: whitesmoke;
+}
