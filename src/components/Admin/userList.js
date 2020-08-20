@@ -1,6 +1,5 @@
 import React from 'react'
 import './admin.scss'
-import { Table, Form, Dropdown, Col, Row, Button } from 'react-bootstrap'
 import TableCommonComponent from '../../common/Table/Table'
 
 const tableHeadArray = [

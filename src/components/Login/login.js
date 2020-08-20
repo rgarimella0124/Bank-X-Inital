@@ -5,30 +5,35 @@ import './login.scss'
 import backgroundImage from '../../assets/DigitalCurrency.svg'
 import bankX from '../../assets/bankxLogo.png'
 import neoKredLogo from '../../assets/neokredLogo.png'
+import ModalBox from '../../common/ModalBox/modal'
 
 function Login() {
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [showModal, setShowModal] = useState(false)
     let history = useHistory();
 
     const handleLoginClick = (event) => {
         let emailStorageValueEncoded = window.btoa({email, password});
         localStorage.setItem("user", emailStorageValueEncoded);
         
-        // history.push("/client/addclient")
         if (emailStorageValueEncoded.length > 0) {
-            history.push('/client/addClient')
-        } else {
-            history.push('/')
+            // history.push('/client/addClient')
+            setShowModal(true)
         }
+        // else {
+        //     history.push('/')
+        // }
     }
-
-    const onModalClose = (value) => {
-        // setisLoginClicked(value);
+{
+    const handleClose = ()=> {
+        setShowModal(false)
     }
 
     return (
         <>
+            <ModalBox showModal={showModal}/>
             <Row>
                 <Col lg='5' style={{backgroundColor: 'white', height: '100vh'}}>
                 <div className='login' style={{backgroundColor: 'white', paddingTop: '80px', paddingRight: '80px', paddingLeft: '80px'}}>
@@ -68,9 +73,9 @@ function Login() {
                     <img src={backgroundImage} alt='' className='login-image'/>
                 </Col>
             </Row>
-            {/* {isLoginClicked && <ModalBox showModal={isLoginClicked} handleLoginClick={handleLoginClick} onClose={onModalClose}/>} */}
             </>
         );
+    }
 }
 
-export default Login;
+export default Login

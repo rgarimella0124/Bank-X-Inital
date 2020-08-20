@@ -1,35 +1,48 @@
-// import React, { useState, useEffect} from 'react';
-// import {Modal, Button, Col, Row} from 'react-bootstrap';
+import React, { useState } from 'react'
+import { Modal, Button, Row } from 'react-bootstrap'
+import { useHistory } from 'react-router'
+import OtpInput from 'react-otp-input'
 
-// function ModalBox({show, handleShow}) {
-//   const [show, setShow] = useState(true);
+function ModalBox({showModal, handleClose}) {
+    const [otpInputValue, setOtpInputValue] = useState('123456')
+    let history = useHistory();
 
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
+    const handleLogin = ()=> {
+        history.push('/client/addClient')
+    }
 
-//   useEffect(() => {
-    
-//   }, []);
+    const handleOtpInputChange = (event)=> {
+        console.log(event, 'event')
+        setOtpInputValue(event.target.value)
+    }
 
+  return (
+    <> 
+      <Modal show={showModal} onHide={handleClose} animation={true}>
+        <Modal.Header closeButton>
+          <Modal.Title>Enter OTP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Row>
+            <OtpInput
+                numInputs={6}
+                value={otpInputValue}
+                containerStyle={{width: '100%', margin: '0 70px'}}
+                inputStyle={{padding: '25px', borderRadius: '25px', border: '1px solid green'}}
+                onChange={(event) => handleOtpInputChange(event)}
+                isInputNum={true}
+                separator={<span>-</span>}
+            />
+        </Row>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleLogin}>
+            Login
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
-//   return (
-//     <> 
-//       <Modal show={show} onHide={handleClose} animation={true}>
-//         <Modal.Header closeButton>
-//           <Modal.Title>Modal heading</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-//         <Modal.Footer>
-//           <Button variant="secondary" onClick={handleClose}>
-//             Close
-//           </Button>
-//           <Button variant="primary" onClick={handleClose}>
-//             Save Changes
-//           </Button>
-//         </Modal.Footer>
-//       </Modal>
-//     </>
-//   );
-// }
-
-// export default ModalBox;
+export default ModalBox;

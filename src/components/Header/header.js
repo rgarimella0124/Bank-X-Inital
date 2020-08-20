@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import {Form, Image, Row, Navbar, Nav, FormControl, Card, Button } from 'react-bootstrap'
+import React from 'react'
+import {Form, Image, Navbar, FormControl, Card, Button } from 'react-bootstrap'
 import userImage from '../../assets/user.svg'
 import './header.scss'
 import { useHistory } from 'react-router-dom'
+import Logout from '../../assets/logout.svg'
 
 const Headers = ()=> {
     let history = useHistory()
@@ -22,10 +23,11 @@ const Headers = ()=> {
                </div>
             </Form>
                 <div className='image_detail' >
-                    <Image src={userImage} roundedCircle style={{width: '5%', marginRight: '5px'}}/>
-                    <Card.Text style={{fontWeight: '600'}}>Welcome, Tarun</Card.Text>
+                    <Image src={userImage} roundedCircle style={{width: '35px', marginRight: '5px'}}/>
+                    <Card.Text className='welcome_name'>Welcome, Tarun</Card.Text>
+                    <Image src={Logout} alt='logout' className='logout' onClick={handleLogOut}/>
                 </div>
-                <p onClick={handleLogOut}>Log oout</p>
+                {/* <p onClick={handleLogOut}>Log oout</p> */}
         </Navbar>
         </>
         )

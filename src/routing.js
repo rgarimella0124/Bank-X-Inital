@@ -1,11 +1,10 @@
-import React, { useEffect, useState }  from 'react'
+import React from 'react'
 import './routing.scss'
 import { Switch, Route, useLocation } from "react-router-dom";
 import Sidebar from './components/Sidebar/sidebar';
 import Headers from './components/Header/header';
 import AddClient from './components/Client/components/addClient'
 import Login from './components/Login/login'
-import Footer from './components/Footer/Footer'
 import AddPocket from './components/Client/components/addPocket'
 import ClientList from './components/Client/components/clientList'
 import PocketList from './components/Client/components/pocketList'
@@ -27,6 +26,7 @@ import AddRole from './components/Admin/addRole'
 import ClientPrefundApproval from './components/clientPrefund/clientPrefundApproval'
 import WalletFundRequest from './components/clientPrefund/walletFundRequest'
 import BulkCardIssuanceIndent from './components/Card/bulkCardIssuanceIndent'
+// import { ToastContainer } from 'react-toastify';
 
 
 const routes = [
@@ -144,7 +144,9 @@ function Routing() {
       </div>}
       <div className="content">
       {show && 
-      <div><Sidebar /></div>}
+      <div><Sidebar /></div>
+      }
+      <div className='route'>
         <Switch>  
         {routes.map((route, index) =>
           <Route
@@ -154,6 +156,7 @@ function Routing() {
             children={route.main}
         />)}
         </Switch>
+        </div>
       </div>
       {/* {show && <div className="foot">
         <Footer />

@@ -54,7 +54,7 @@ function Sidebar(shouldShow) {
                         <img src={rightarrow} alt='logo' className={toogleSidebar ? 'hide_rightimage' : 'rightarrow_image'}/>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="1" style={{backgroundColor: 'white'}}>
-                    <Card.Body className='body' className='link'>
+                    <Card.Body className='body'>
                         <Link to='/clientrelation/add' className='link'><p className='p'>Add Client Relationship</p></Link>
                         <Link to='/clientrelation/relationshipmapping' className='link'><p className='p'>Client Relationship Mapping</p></Link>
                         <Link to='/clientrelation/relationshiplist' className='link'><p className='p'>Client Relationship List</p></Link>
@@ -76,17 +76,14 @@ function Sidebar(shouldShow) {
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
-                <Link to='/compliance' className='link'>
                 <Card className={toogleSidebar ? 'hide_card': 'card'}>
+                 <Link to='/compliance' className='link'>
                     <Accordion.Toggle as={Card.Header} eventKey="3" className='acdd'>
                         <img src={compliance} alt='logo' className={toogleSidebar ? 'hide_sideImage' : 'sidebar_image'}/>
                         <label className={toogleSidebar ? 'hide_siderbarName' : 'sidebar_name'}>Compliance Report</label>                    
                     </Accordion.Toggle>
-                    {/* <Accordion.Collapse eventKey="3" style={{backgroundColor: 'white'}}>
-                    <Card.Body className='body'>Hello! I'm another body</Card.Body>
-                    </Accordion.Collapse> */}
+                 </Link>
                 </Card>
-                </Link>
                 <Card className={toogleSidebar ? 'hide_card': 'card'}>
                     <Accordion.Toggle as={Card.Header} eventKey="4" className='acdd'>
                         <img src={card} alt='logo' className={toogleSidebar ? 'hide_sideImage' : 'sidebar_image'}/>
@@ -98,9 +95,9 @@ function Sidebar(shouldShow) {
                         <Link to='/cards/cardList' className='link'><p className='p'>Card List</p></Link>
                         <Link to='/cards/assignPhysicalCards' className='link'><p className='p'>Assign Physical Cards</p></Link>
                         <Link to='/cards/bulkcardIssuance' className='link'><p className='p'>Bulk Card Issuance</p></Link>
-                        <Link to='/cards/bulkCardIssuanceindent'><p className='p'>Bulk Card Issuance Indent</p></Link>
-                        <Link to='/cards/addclient'><p className='p'>Bulk Card Issuance List</p></Link>
-                        <Link to='/cards/addclient'><p className='p'>Bulk Card Issuance Response</p></Link>
+                        <Link to='/cards/bulkCardIssuanceindent' className='link'><p className='p'>Bulk Card Issuance Indent</p></Link>
+                        <Link to='/cards/addclient' className='link'><p className='p'>Bulk Card Issuance List</p></Link>
+                        <Link to='/cards/addclient' className='link'><p className='p'>Bulk Card Issuance Response</p></Link>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -112,8 +109,8 @@ function Sidebar(shouldShow) {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="5" style={{backgroundColor: 'white'}}>
                     <Card.Body className='body'>
-                        <Link to='/client/addclient'><p className='p'>SettleMent Reports</p></Link>
-                        <Link to='/client/addclient'><p className='p'>Transaction Reports</p></Link>
+                        <Link to='/client/addclient' className='link'><p className='p'>SettleMent Reports</p></Link>
+                        <Link to='/client/addclient' className='link'><p className='p'>Transaction Reports</p></Link>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -125,8 +122,8 @@ function Sidebar(shouldShow) {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="6" style={{backgroundColor: 'white'}}>
                     <Card.Body className='body'>
-                        <Link to='/clientPrefund/approval'><p className='p'>Client Prefund Approval</p></Link>
-                        <Link to='/clientPrefund/walletrequest'><p className='p'>Wallet Fund Request</p></Link>
+                        <Link to='/clientPrefund/approval' className='link'><p className='p'>Client Prefund Approval</p></Link>
+                        <Link to='/clientPrefund/walletrequest' className='link'><p className='p'>Wallet Fund Request</p></Link>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -138,8 +135,8 @@ function Sidebar(shouldShow) {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="7" style={{backgroundColor: 'white'}}>
                     <Card.Body className='body'>
-                    <Link to='/admin/addRole'><p className='p'>Add Role</p></Link>
-                    <Link to='/admin/userList'><p className='p'>User List</p></Link>
+                        <Link to='/admin/addRole' className='link'><p className='p'>Add Role</p></Link>
+                        <Link to='/admin/userList' className='link'><p className='p'>User List</p></Link>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -151,8 +148,8 @@ function Sidebar(shouldShow) {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="8" style={{backgroundColor: 'white'}}>
                     <Card.Body className='body'>
-                    <Link to='/client/addclient'><p className='p'>Bulk Customer Registraion</p></Link>
-                    <Link to='/bulkregistration/bulkcustomerList'><p className='p'>Bulk Customer List</p></Link>
+                        <Link to='/client/addclient' className='link'><p className='p'>Bulk Customer Registraion</p></Link>
+                        <Link to='/bulkregistration/bulkcustomerList' className='link'><p className='p'>Bulk Customer List</p></Link>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>

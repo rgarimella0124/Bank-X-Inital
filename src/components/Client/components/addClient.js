@@ -4,7 +4,7 @@ import { Form, Row, Col, Button, Dropdown } from 'react-bootstrap';
 
 function AddClient() {
     return (
-        <div className='top_div'>
+        <div className='top_div'>        
         <Row>
           <Col>
             <Form style={{paddingTop: '15px'}}>
@@ -61,8 +61,8 @@ function AddClient() {
              </Form>
           </Col>
         </Row>
-        <Row>
-          <Button type="submit" size="xs">Submit</Button>
+        <Row className='btn_row'>
+          <Button type="submit" size="xs" className='submit_btn'>Submit</Button>
         </Row>
         </div>
         );

@@ -1,7 +1,7 @@
 .image_detail {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 30%;
 }
 
 .navbar {
@@ -9,7 +9,7 @@
     background-color: rgb(255, 255, 255);
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 20%;
+    margin-left: 25%;
 }
 
 .header_search {
@@ -21,4 +21,18 @@
 btn {
     width: 110px;
     margin-left: 4px;
+}
+
+.logout {
+    height: 25px;
+    cursor: pointer;
+    margin-left: 25%;
+    color: greenyellow;
+    margin-top: 15px;
+}
+
+.welcome_name {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 13px;
 }

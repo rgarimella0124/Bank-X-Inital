@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button, Col, Form, Dropdown, Row, Table } from 'react-bootstrap'
 import './bulkRegistration.scss'
 import TableCommonComponent from '../../common/Table/Table'
 

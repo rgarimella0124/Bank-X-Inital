@@ -1,5 +1,4 @@
 import React from 'react'
-import { Table, Button, Col } from 'react-bootstrap'
 import './card.scss'
 import TableCommonComponent from '../../common/Table/Table'
 

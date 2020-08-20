@@ -1,6 +1,6 @@
 import React from 'react';
 import './clientRelationShip.scss'
-import { Form, Row, Col, Button, Dropdown, Table, Pagination } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import PaginationCommon from '../../common/Pagination/pagination'
 import TableCommonComponent from '../../common/Table/Table'
 
